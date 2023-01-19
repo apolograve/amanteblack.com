@@ -31,3 +31,20 @@ likes.forEach(likes => {
         }
     });
 })
+
+
+function random(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+var initial = random(500, 2000);
+var counts = initial;
+
+setInterval(function() {
+  var variation = random(-5,5);
+
+  counts += variation
+  document.getElementById("users").innerHTML = counts;
+
+}, 1000)

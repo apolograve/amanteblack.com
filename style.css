@@ -43,7 +43,25 @@ body {
     color: white;
     text-align: center;
     width: 95%;
-    margin: 93px 0 88px 0;
+    margin: 93px 0 58px 0;
+}
+
+.live {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #929292;
+    text-align: center;
+    width: 95%;
+    margin: 0 0 25px 0;
+}
+
+.live_users {
+    color: white;
+    background-color: red;
+    padding: 2px 4px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .container_vsl {
@@ -101,19 +119,30 @@ body {
     transform: scale(1.1);
 }
 
+@media screen and (max-width: 1280px) {
+    /* BreakPoint, Posições Relativas */
+    .headline {
+        margin: 56px 0 25px 0;
+        font-size: 31px;
+    }
+
+    .container_cta {
+        margin: 0 0 80px 0;
+    }
+}
+
 /* Content */
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
 }
 
-/* fb */
+/* FB */
 .container_fb {
     max-height: auto;
     max-width: 900px;
-    width: 90%;
+    width: 95%;
     background-color: white;
     border-radius: 6px;
     padding: 0 15px 10px 10px;
@@ -131,15 +160,14 @@ body {
     border-top: .1px solid #797979;
 }
 
-.comment {
+.comment,
+.comment_answer {
     display: flex;
     flex-direction: row;
     margin: 15px 0 0 0;
 }
 
 .comment_answer {
-    display: flex;
-    flex-direction: row;
     margin: 15px 0 0 50px;
 }
 
@@ -180,16 +208,14 @@ body {
     margin: 5px 0 0 0;
 }
 
-.fb_footer {
+.fb_footer,
+.fb_footer_answer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .fb_footer_answer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin: 0 0 0 50px;
 }
 
@@ -248,7 +274,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 14px;
-    color: #535353;
+    color: #4e4e4e;
     margin: 2px 2px 0 3px;
 }
 
@@ -258,7 +284,7 @@ body {
     font-size: 12px;
     color: #5f5f5f;
     text-align: center;
-    margin: 25px 0 0 0;
+    margin: 30px 0 0 0;
 }
 
 .comment_load:hover {
@@ -279,7 +305,8 @@ body {
 
 .synopsis,
 .award,
-.award_two {
+.award_two,
+.satisfaction {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 17px;
@@ -288,37 +315,22 @@ body {
     text-align: center;
     line-height: 1.5;
     width: 90%;
+    margin: 35px 0 0 0;
 }
 
 .satisfaction {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: white;
-    max-width: 63em;
-    text-align: center;
-    line-height: 1.4;
-    margin: 0 0 300px 0;
+    margin: 35px 0 300px 0;
 }
 
 @media screen and (max-width: 1280px) {
     /* BreakPoint, Posições Relativas */
-    .headline {
-        margin: 56px 0 45px 0;
-        font-size: 31px;
-    }
-
-    .container_cta {
-        margin: 0 0 130px 0;
-    }
-
     .headline_two {
         font-size: 60px;
         margin: 100px 0 0 0;
     }
 
     .satisfaction {
-        margin: 0;
+        margin: 35px 0 0 0;
     }
 }
 
@@ -326,13 +338,13 @@ body {
 .floating {
     display: flex;
     flex-direction: row;
-    margin: 0 0 50px 0;
+    margin: 0 0 90px 0;
     gap: 50px;
 }
 
 .floating_content {
     height: 350px;
-    width: 310px;
+    max-width: 310px;
     text-align: center;
 }
 
@@ -369,12 +381,17 @@ body {
     margin: 20px 0 0 0;
 }
 
+.floating_desc_uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1280px) {
     .floating {
         display: flex;
         flex-direction: column;
-        gap: 220px;
-        margin: 220px 0 0 0;
+        gap: 200px;
+        margin: 200px 0 0 0;
     }
 }
 
@@ -393,10 +410,10 @@ body {
 
 .all_title_border {
     border-top: .1px solid #f4353f;
-    width: 60px;
+    width: 50px;
     margin-left: auto;
     margin-right: auto;
-    margin: -30px 0 0 0;
+    margin: 5px 0 35px 0;
 }
 
 .season {
@@ -407,7 +424,6 @@ body {
 .features_img_mobile {
     height: 200px;
     width: auto;
-    margin: -35px 0 0 0;
     pointer-events: none;
     display: none;
 }
@@ -443,8 +459,8 @@ body {
 .features_img_desktop {
     height: 220px;
     width: auto;
-    margin: -35px 0 0 0;
     pointer-events: none;
+    margin: -35px 0 0 0;
 }
 
 .features_two {
@@ -540,7 +556,7 @@ body {
     display: flex;
     flex-direction: row;
     max-width: 1100px;
-    margin: 0 0 30px 0;
+    margin: 0 0 65px 0;
     border-bottom: .1px solid #353535;
 }
 
@@ -614,7 +630,7 @@ body {
     }
 
     .bonus_img {
-        max-height: 200px;
+        max-height: 190px;
         width: auto;
     }
 
@@ -677,6 +693,7 @@ body {
     font-size: 30px;
     color: white;
     line-height: 42px;
+    letter-spacing: 1.6px;
     margin: 0 0 0 50px;
 }
 
@@ -711,7 +728,7 @@ body {
 
 /* Ticket */
 .container_ticket {
-    max-height: 165px;
+    max-height: 175px;
     max-width: 540px;
     height: 100%;
     width: 95%;
@@ -747,7 +764,7 @@ body {
 }
 
 .container_ticket_two {
-    max-height: 165px;
+    max-height: 175px;
     max-width: 540px;
     height: 100%;
     width: 95%;
@@ -756,7 +773,7 @@ body {
 }
 
 .container_ticket_three {
-    max-height: 165px;
+    max-height: 175px;
     max-width: 540px;
     height: 100%;
     width: 95%;
@@ -839,7 +856,8 @@ body {
     font-weight: 700;
     font-size: 70px;
     color: #353535;
-    line-height: 105px;
+    line-height: 10px;
+    text-align: center;
     margin: 0 10px 0 10px;
 }
 
@@ -882,7 +900,7 @@ body {
     cursor: pointer;
     -webkit-transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
-    padding: 0 50px 0 50px;
+    padding: 0 33px 0 33px;
 }
 
 .ticket_cta:hover {
@@ -921,6 +939,7 @@ body {
     letter-spacing: 6.7px;
     text-align: center;
     margin: 35px 0 0 0;
+    width: 95%;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1023,6 +1042,7 @@ body {
     letter-spacing: 1.8px;
     text-align: center;
     line-height: 18px;
+    width: 95%;
 }
 
 .container_disclaimer {

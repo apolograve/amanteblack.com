@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TENTATIVA DE ACESSO AO CÓDIGO FONTE NEGADA</title>
+
+  <!--shift-->
+  <link rel="icon" type="image/x-icon" href="../../../img/icon.png">
+
+  <!--shift-->
+  <!-- FONTES VIDE CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+
+    <div class="flex-1">
+      <h1 class="headline">ATENÇÃO!</h1>
+      <h1 class="title">Você não deveria estar aqui. Este código fonte é <span style="color: red;">PROPRIETÁRIO</span> e
+        não deve ser copiado, replicado, ou alterado para fins comercias, não comerciais, de qualquer forma e de nenhuma
+        outra maneira, o seu uso indevido, de qualquer natureza, ou sob qualquer circunstância, resultará em medidas
+        legais imediatas.</h1>
+      <h1 class="user-ip">ip</h1>
+    </div>
+
+
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: 0;
+        line-height: 1;
+      }
+
+      body {
+        font-size: 100%;
+        background-color: black;
+        overflow-x: hidden;
+        user-select: none;
+      }
+
+      .flex-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .headline {
+        font-family: 'Times', serif;
+        font-weight: 100;
+        font-size: 50px;
+        color: red;
+        width: 95%;
+        text-align: center;
+        margin: 0 0 20px 0;
+      }
+
+      .title {
+        font-family: 'Times', serif;
+        font-weight: 100;
+        font-size: 40px;
+        color: white;
+        width: 95%;
+        text-align: center;
+        margin: 0 0 50px 0;
+      }
+
+      .user-ip {
+        font-family: 'Times', serif;
+        font-weight: 100;
+        font-size: 60px;
+        color: white;
+        width: 95%;
+        text-align: center;
+      }
+    </style>
+
+
+    <!--shift-->
+    <script defer>
+
+      /* alert("ESTE CÓDIGO NÃO SERÁ EXECUTADO! REMOVA O COMENTÁRIO!"); */
+      /* console.log("BLOCO DE CÓDIGO DESATIVADO, REMOVA O COMENTÁRIO!"); */
+
+
+      // ESTÁ ESTRUTURA POSSUI REDUNDÂNCIAS PROPOSITAIS.
+      // BLOQUEAR INSPEÇÃO DE ELEMENTOS
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'i' && event.ctrlKey && event.shiftKey) {
+            event.preventDefault();
+          }
+        });
+        
+        // BLOQUEAR EXIBIR CÓDIGO FONTE
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'u' && event.ctrlKey) {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR AS TECLAS DE ACESSO AO CÓDIGO FONTE
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && (event.key === 's' || event.key === 'c')) {
+                event.preventDefault();
+            }
+        });
+        
+        // BLOQUEAR MENU DE CONTEXTO
+        document.addEventListener('contextmenu', function(event) {
+          event.preventDefault();
+        });
+        
+        // BLOQUEAR ATALHO "CTRL+U"
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'u' && event.ctrlKey) {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR ATALHO "CTRL+P"
+        document.addEventListener('keydown', function(event) {
+          if (event.ctrlKey && event.keyCode == 80) {
+              event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR ATALHO "CTRL+S"
+        document.addEventListener('keydown', function(event) {
+          if (event.ctrlKey && event.key === 's') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR ATALHO "PRINT-SCR"
+        document.addEventListener('keyup', function(event) {
+          if (event.keyCode == 44) { // código da tecla PrintScreen
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR ATALHO "PRINT-2"
+        document.addEventListener('visibilitychange', function() {
+          if (document.visibilityState === 'hidden') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR VISIBILIDADE
+        document.addEventListener('webkitvisibilitychange', function() {
+          if (document.webkitVisibilityState === 'hidden') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEIA A VISIBILIDADE - UPDATE
+        document.addEventListener('visibilitychange', function() {
+          if (document.visibilityState === 'hidden') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR TODAS A TECLAS
+        document.addEventListener('keydown', function(event) {
+          event.preventDefault();
+        });
+        
+        // BLOQUEAR BOTÃO DE VOLTAR
+        window.addEventListener('beforeunload', function(event) {
+          event.preventDefault();
+        });
+        
+        // BLOQUEAR INSPEÇÃO DE CÓDIGO POR "F12"
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'f12') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR VIEW-SOURCE:
+        if (window.location.href.includes('view-source:')) {
+          window.location.href = window.location.href.replace('view-source:', '');
+        }
+        
+        // BLOQUEAR EVENTOS DE TECLADO E MOUSE
+        document.addEventListener('keydown', function(event) {
+          event.preventDefault();
+        });
+        document.addEventListener('mousedown', function(event) {
+          event.preventDefault();
+        });
+      
+        // OCULTAR O MENU DO NAVEGADOR
+        document.addEventListener('DOMContentLoaded', function() {
+          document.body.style.userSelect = 'none';
+          document.body.style.MozUserSelect = 'none';
+          document.body.style.msUserSelect = 'none';
+          document.body.style.WebkitUserSelect = 'none';
+          document.body.style.userDrag = 'none';
+          document.body.style.MozUserDrag = 'none';
+          document.body.style.msUserDrag = 'none';
+          document.body.style.WebkitUserDrag = 'none';
+        });
+      
+         // REDIRECIONAR PARA UMA PÁGINA DE ERRO AO TENTAR ACESSAR O CÓDIGO FONTE - SUBSTITUIR
+         document.addEventListener('contextmenu', function(event) {
+          if (event.target.tagName === 'CODE') {
+              window.location.href = 'acesso-nao-autorizado/rastreando-localizacao/localizacao-enviada-para-o-monitoramento/index.html';
+          }
+         });
+      
+         // AUTENTICAÇÃO E AUTORIZAÇÃO DE ACESSO AO CÓDIGO FONTE - SUBSTITUIR
+         function authenticate() {
+          // VERIFICAR SE O USUÁRIO ESTÁ AUTENTICADO
+          if (!authenticated) {
+              window.location.href = 'acesso-nao-autorizado/rastreando-localizacao/localizacao-enviada-para-o-monitoramento/index.html';
+          }
+         }
+      
+         // MONITORAR O ACESSO AO CÓDIGO FONTE - SUBSTITUIR
+         setInterval(function() {
+          // VERIFICAR SE HÁ TENTATIVAS DE ACESSO AO CÓDIGO FONTE
+          if (attemptedAccess) {
+              // BLOQUEAR O ACESSO AO CÓDIGO FONTE
+              window.location.href = 'acesso-nao-autorizado/rastreando-localizacao/localizacao-enviada-para-o-monitoramento/index.html';
+          }
+      }, 1000);
+
+
+      /*
+      // TRAVA DE DOMÍNIO - SUBSTITUIR
+      const desiredDomain = 'http://127.0.0.1:5500/index.html';
+      const currentDomain = location.host;
+      
+      if (currentDomain === desiredDomain) {
+        // Execute a função com o código
+        function executeCode() {
+          // Coloque todo o código JavaScript aqui
+        }
+        executeCode();
+      } else {
+        window.location.href = 'acesso-nao-autorizado/rastreando-localizacao/localizacao-enviada-para-o-monitoramento/index.html';
+      }
+      */
+
+      // IP
+      function getUserIP() {
+        return fetch('https://api.ipify.org?format=json')
+          .then(response => response.json())
+          .then(data => data.ip);
+      }
+
+      function displayUserIP() {
+        getUserIP()
+          .then(ip => {
+            const ipElement = document.querySelector('.user-ip');
+            ipElement.textContent = `Seu IP é: ${ip}`;
+          })
+          .catch(error => {
+            console.error('Erro ao obter o IP:', error);
+          });
+      }
+
+      displayUserIP();
+
+    </script>
+
+  </header>
+
+</body>
+</html>

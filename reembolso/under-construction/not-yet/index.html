@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+
+  <!--SHIFT-->
+  <link rel="icon" type="image/x-icon" href="../../img/icon.png">
+
+  <!-- FONTES VIDE CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+
+    <div class="flex-1">
+      <h1 class="headline">REEMBOLSO</h1>
+      <h1 class="headline-2">Por favor, escreva o motivo do seu reembolso</h1>
+
+      <div class="conteiner-textarea">
+        <textarea id="w3review" name="w3review" rows="9" cols="40">Nos ajude a melhorar :)</textarea>
+      </div>
+
+      <h1 class="desc">Clique em enviar e pronto! Seu reembolso será extornado na sua próxima fatura, ou por pix
+        na conta que realizou o pagamento, em no máximo 7 dias</h1>
+
+      <button class="reembolsoButton">SOLICITAR REEMBOLSO</button>
+      <p class="reembolsoMessage" style="display: none; color: green;">Reembolso realizado com sucesso!</p>
+
+    </div>
+
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: 0;
+        line-height: 1;
+      }
+
+      body {
+        font-size: 100%;
+        background-color: black;
+        overflow-x: hidden;
+        user-select: none;
+      }
+
+      .flex-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .headline {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        width: 95%;
+        margin: 0 0 30px 0;
+      }
+
+      .headline-2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        width: 95%;
+        margin: 0 0 30px 0;
+      }
+
+      .conteiner-textarea {
+        margin: 0 0 10px 0;
+      }
+
+      .desc {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        width: 95%;
+        margin: 0 0 30px 0;
+      }
+
+      button {
+        height: 40px;
+        max-width: 200px;
+        width: 95%;
+        color: black;
+        margin: 0 0 20px 0;
+      }
+    </style>
+
+
+    <script defer>
+
+      /* alert("ESTE CÓDIGO NÃO SERÁ EXECUTADO! REMOVA O COMENTÁRIO!"); */
+      /* console.log("BLOCO DE CÓDIGO DESATIVADO, REMOVA O COMENTÁRIO!"); */
+
+
+      // ESTÁ ESTRUTURA POSSUI REDUNDÂNCIAS PROPOSITAIS.
+      // BLOQUEAR INSPEÇÃO DE ELEMENTOS
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'i' && event.ctrlKey && event.shiftKey) {
+            event.preventDefault();
+          }
+        });
+        
+        // BLOQUEAR EXIBIR CÓDIGO FONTE
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'u' && event.ctrlKey) {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR AS TECLAS DE ACESSO AO CÓDIGO FONTE
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && (event.key === 's' || event.key === 'c')) {
+                event.preventDefault();
+            }
+        });
+        
+        // BLOQUEAR MENU DE CONTEXTO
+        document.addEventListener('contextmenu', function(event) {
+          event.preventDefault();
+        });
+        
+        // BLOQUEAR ATALHO "CTRL+U"
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'u' && event.ctrlKey) {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR ATALHO "CTRL+P"
+        document.addEventListener('keydown', function(event) {
+          if (event.ctrlKey && event.keyCode == 80) {
+              event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR ATALHO "CTRL+S"
+        document.addEventListener('keydown', function(event) {
+          if (event.ctrlKey && event.key === 's') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR ATALHO "PRINT-SCR"
+        document.addEventListener('keyup', function(event) {
+          if (event.keyCode == 44) { // código da tecla PrintScreen
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR ATALHO "PRINT-2"
+        document.addEventListener('visibilitychange', function() {
+          if (document.visibilityState === 'hidden') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR VISIBILIDADE
+        document.addEventListener('webkitvisibilitychange', function() {
+          if (document.webkitVisibilityState === 'hidden') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEIA A VISIBILIDADE - UPDATE
+        document.addEventListener('visibilitychange', function() {
+          if (document.visibilityState === 'hidden') {
+            event.preventDefault();
+          }
+        });
+        
+        // BLOQUEAR BOTÃO DE VOLTAR
+        window.addEventListener('beforeunload', function(event) {
+          event.preventDefault();
+        });
+        
+        // BLOQUEAR INSPEÇÃO DE CÓDIGO POR "F12"
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'f12') {
+            event.preventDefault();
+          }
+        });
+      
+        // BLOQUEAR VIEW-SOURCE:
+        if (window.location.href.includes('view-source:')) {
+          window.location.href = window.location.href.replace('view-source:', '');
+        }
+      
+        // OCULTAR O MENU DO NAVEGADOR
+        document.addEventListener('DOMContentLoaded', function() {
+          document.body.style.userSelect = 'none';
+          document.body.style.MozUserSelect = 'none';
+          document.body.style.msUserSelect = 'none';
+          document.body.style.WebkitUserSelect = 'none';
+          document.body.style.userDrag = 'none';
+          document.body.style.MozUserDrag = 'none';
+          document.body.style.msUserDrag = 'none';
+          document.body.style.WebkitUserDrag = 'none';
+        });
+      
+         // REDIRECIONAR PARA UMA PÁGINA DE ERRO AO TENTAR ACESSAR O CÓDIGO FONTE - SUBSTITUIR
+         document.addEventListener('contextmenu', function(event) {
+          if (event.target.tagName === 'CODE') {
+              window.location.href = 'acesso-nao-autorizado/rastreando-localizacao/localizacao-enviada-para-o-monitoramento/index.html';
+          }
+         });
+      
+         // AUTENTICAÇÃO E AUTORIZAÇÃO DE ACESSO AO CÓDIGO FONTE - SUBSTITUIR
+         function authenticate() {
+          // VERIFICAR SE O USUÁRIO ESTÁ AUTENTICADO
+          if (!authenticated) {
+              window.location.href = 'acesso-nao-autorizado/rastreando-localizacao/localizacao-enviada-para-o-monitoramento/index.html';
+          }
+         }
+      
+         // MONITORAR O ACESSO AO CÓDIGO FONTE - SUBSTITUIR
+         setInterval(function() {
+          // VERIFICAR SE HÁ TENTATIVAS DE ACESSO AO CÓDIGO FONTE
+          if (attemptedAccess) {
+              // BLOQUEAR O ACESSO AO CÓDIGO FONTE
+              window.location.href = 'acesso-nao-autorizado/rastreando-localizacao/localizacao-enviada-para-o-monitoramento/index.html';
+          }
+      }, 1000);
+
+
+      /*
+      // TRAVA DE DOMÍNIO - SUBSTITUIR
+      const desiredDomain = 'http://127.0.0.1:5500/index.html';
+      const currentDomain = location.host;
+      
+      if (currentDomain === desiredDomain) {
+        // Execute a função com o código
+        function executeCode() {
+          // Coloque todo o código JavaScript aqui
+        }
+        executeCode();
+      } else {
+        window.location.href = 'acesso-nao-autorizado/rastreando-localizacao/localizacao-enviada-para-o-monitoramento/index.html';
+      }
+      */
+
+
+
+      // Obter referência aos elementos de botão e texto
+      const reembolsoButton = document.querySelector('.reembolsoButton');
+      const reembolsoMessage = document.querySelector('.reembolsoMessage');
+
+      // Verificar se a mensagem deve ser exibida no carregamento da página
+      if (localStorage.getItem('reembolsoMessageVisible') === 'true') {
+        reembolsoMessage.style.display = 'block';
+      }
+
+      // Adicionar um evento de clique ao botão
+      reembolsoButton.addEventListener('click', () => {
+        // Exibir o texto de reembolso
+        reembolsoMessage.style.display = 'block';
+        // Salvar o estado da mensagem no localStorage
+        localStorage.setItem('reembolsoMessageVisible', 'true');
+      });
+
+    </script>
+
+  </header>
+
+</body>
+</html>

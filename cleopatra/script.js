@@ -239,7 +239,7 @@ function showPopup(message) {
   }, 5000);
 }
 
-var names = ["leandro", "jéssica", "andré", "suzana", "evelin", "julia", "maria", "luísa", "eduarda", "ana", "laura", "beatriz", "pedro", "joão", "afonso", "josé", "henrique", "erick", "gabriel", "davi", "lucas", "guilherme", "arthur", "luiz", "vitor", "fábio", "carlos", "sabrina", "damião", "vanderlene", "giovanna", "alice", "jonhatan", "bianca", "gabriela", "bruno", "antonio", "leonardo", "juliana"];
+var names = ["amanda", "jéssica", "helena", "suzana", "evelin", "julia", "maria", "luísa", "eduarda", "ana", "laura", "beatriz", "rafaella", "natalia", "regina", "mariana", "maria", "eloah", "leticia", "lorena", "nicole", "daiana", "sandra", "luiza", "vitoria", "fabiana", "carol", "sabrina", "damião", "vanderleia", "giovanna", "alice", "lohana", "bianca", "gabriela", "daiane", "antonia", "sofia", "juliana"];
 var message = " acabou de comprar";
 
 window.addEventListener('load', function() {

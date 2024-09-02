@@ -178,8 +178,8 @@ header:empty {
 
 .popup {
     position: fixed;
-    bottom: 160px;
-    left: 20px;
+    bottom: 170px;
+    left: 5px;
     background-color: white;
     padding: 15px 15px 15px 15px;
     border-radius: 3px;

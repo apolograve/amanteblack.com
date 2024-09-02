@@ -82,7 +82,8 @@ header:empty {
 
 .city,
 .day-of-week,
-.data {
+.data,
+.timer {
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: underline;
